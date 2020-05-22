@@ -4,7 +4,6 @@
 # are multiplied. 
   
 # Find remainder of arr[0] * arr[1] 
-# * .. * arr[n-1] 
 def findremainder(arr, lens, n): 
     mul = 1
   
