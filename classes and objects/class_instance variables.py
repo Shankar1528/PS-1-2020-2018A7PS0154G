@@ -2,7 +2,6 @@
      
 # Class for Dog  
 class Dog:  
-    
     # Class Variable  
     animal = 'dog'             
     
