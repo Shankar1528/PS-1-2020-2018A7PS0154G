@@ -12,10 +12,8 @@ The following files contain the python implementation of all major IO ops:
 
   1. Basic : The basic operations on Files.
 
-  2. RW : The read and write operation with their several implementations
-
-  3. rename_remove : Methods to rename and even remove the file.
-
+  2. IO Operations : The read and write operation with their several implementation
+ 
   4. Directory : Operations related to directories.
 
   
