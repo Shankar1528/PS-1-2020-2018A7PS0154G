@@ -14,6 +14,6 @@ The following files contain the python implementation of all major IO ops:
 
   2. IO Operations : The read and write operation with their several implementation
  
-  4. Directory : Operations related to directories.
+  3. Directory : Operations related to directories.
 
   
