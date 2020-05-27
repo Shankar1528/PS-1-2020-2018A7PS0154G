@@ -1,30 +1,19 @@
 import sys
 
-
-
-class Contact_Detail:
+class Contact_Details:
 
     def __init__(self,name,number,address):
 
         self.name=name
-
         self.number=number
-
         self.address=address
 
-
-
-
-
-dict_phone={}
+phone_dir={}
 
 try:
-
      phone_book=open("phonebook.txt",'r',encoding='utf-8')
 
      for line in phone_book:
-
-        #print("jscbsh")
 
         #print(line)
 
@@ -32,7 +21,7 @@ try:
 
         #print(s[0])
 
-        Detail1=Contact_Detail(s[0],s[1],s[2])
+        Detail1=Contact_Details(s[0],s[1],s[2])
 
         dict_phone[Detail1.name]=Detail1
 
@@ -47,24 +36,19 @@ finally:
     phone_book.close()
 
 
-
-
-
-
-
 flag=0
 
 while(flag==0):
 
     print("Enter 1 to add contact")
 
-    print("Enter 2 to update existing contact")
+    print("Enter 2 to update contact")
 
-    print("Enter 3 to display existing contact")
+    print("Enter 3 to display contact")
 
-    print("Enter 4 to delete existing contact")
+    print("Enter 4 to delete contact")
 
-    print("Enter anything else to terminate ")
+    print("Enter any other no. to terminate ")
 
     choice = int(input())
 
@@ -72,7 +56,7 @@ while(flag==0):
 
 
 
-    if(choice==1):#add contact
+    if(choice==1):
 
         name=input("Enter name ")
 
@@ -104,11 +88,11 @@ while(flag==0):
 
             else:
 
-                print("Contact succesfully added!!!!!")
+                print("Contact succesfully added")
 
             finally:
 
-                phone_book.close()
+               phone_book.close()
 
         else:
 
@@ -120,7 +104,7 @@ while(flag==0):
 
 
 
-    elif(choice==2):#update contact
+    elif(choice==2):
 
         name=input("Enter name ")
 
@@ -130,40 +114,5 @@ while(flag==0):
 
         check=0
 
-        if name in dict_phone:
-
-            check=1
-
-        if(check==1):
-
-            Detail1=Contact_Detail(name,number,address)
-
-            dict_phone[name]=Detail1
-
-            try:
-
-                phone_book=open("phonebook.txt",'w',encoding='utf-8')
-
-                for record in dict_phone:
-
-                    #phone_book.write("jvhbdhf")
-
-                    phone_book.write("{},{},{}\n".format(dict_phone[record].name,dict_phone[record].number,dict_phone[record].address))
-
-            except:
-
-                print ((sys.exc_info()[0]),"occured")
-
-            else:
-
-                print("Contact successfully updated")
-
-            finally:
-
-                phone_book.close()
-
-        else:
-
-            print("Name doesnot exist") 
-
-    
+      
+            
