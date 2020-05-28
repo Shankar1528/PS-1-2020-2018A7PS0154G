@@ -16,9 +16,7 @@ try:
      for line in phone_book:
 
         #print(line)
-
         s=list(line.split(","))
-
         #print(s[0])
 
         Detail1=Contact_Details(s[0],s[1],s[2])
@@ -35,7 +33,6 @@ finally:
 
     phone_book.close()
 
-
 flag=0
 
 while(flag==0):
@@ -51,10 +48,6 @@ while(flag==0):
     print("Enter any other no. to terminate ")
 
     choice = int(input())
-
-    
-
-
 
     if(choice==1):
 
@@ -101,8 +94,6 @@ while(flag==0):
             print()
 
     
-
-
 
     elif(choice==2):
 
