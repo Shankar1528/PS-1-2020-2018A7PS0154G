@@ -9,6 +9,7 @@ mydb = mysql.connector.connect(
   database="mydatabase"
 )
 
+
 mycursor = mydb.cursor()
 
 sql = "SELECT * FROM customers WHERE address ='Park Lane 38'"
@@ -23,14 +24,12 @@ for x in myresult:
 # Select records where 
 # the address contains the word "way"
   import mysql.connector
-
 mydb = mysql.connector.connect(
   host="localhost",
   user="yourusername",
   passwd="yourpassword",
   database="mydatabase"
 )
-
 mycursor = mydb.cursor()
 
 sql = "SELECT * FROM customers WHERE address LIKE '%way%'"
