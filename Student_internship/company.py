@@ -1,15 +1,52 @@
 class Company(object):
 
+    def __init__(self,name,field,type,CEO,coach):
 
+            self.name=name
+            
+           self.field=field 
+        
+           self.type=type
+            
+            self.CEO=CEO
+            
+            self.coach=coach
 
-    def __init__(self,name,field,MD,type):
+    def add(self):
 
+        try:
 
+            conn = sqlite3.connect('Company.db')
 
-        self.name = name
+            c=conn.cursor()
 
-        self.field = field
+            c.execute('''CREATE TABLE company
 
-        self.MD = MD
+             (name text,field text,type text,CEO text,coachname text)''')
 
-        self.type = type
+            name=input("Enter name ")
+
+            field=input("Enter field")
+
+            type=input("Enter type")
+
+            CEO=input("Enter CEO")
+
+            coach=input("Enter coach name ")
+
+            c.execute("INSERT INTO student VALUES(name,field,type,CEO,coach)")
+
+            conn.commit()
+
+        except:
+
+            print ((sys.exc_info()[0]),"occured")
+
+        else:
+
+            print("successfully added")
+
+        finally:
+
+            conn.close()
+
