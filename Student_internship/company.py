@@ -12,4 +12,4 @@ class Company(object):
 
         self.MD = MD
 
-        slef.type = type
+        self.type = type
