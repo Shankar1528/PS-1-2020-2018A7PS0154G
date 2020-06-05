@@ -9,7 +9,6 @@ class Internship_Center(Company):
 
     # prepare a cursor object using cursor() method
 
-
     cursor = db.cursor()
 
     def __init__(self,name,field,MD,type,project,mode = 0):
@@ -40,7 +39,6 @@ class Internship_Center(Company):
         self.students = []
 
         self.coach = None
-
 
     def set_Coach(self,coach):
 
