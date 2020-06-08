@@ -10,21 +10,26 @@ x[0]=42
 
 print(x)
 
-print(a)#changes are not reflected back
+print(a)
+
 
 y[0]=42
 
 print(y)
 
-print(a)#changes are reflected back
+print(a)
 
 
 a[0]=37
 
-print(x)#change not reflected
+print(x)
 
-print(y)#changes are still reflectes
+print(y)
 
-print(x.base)#none bcoz it is copy
 
-print(y.base)#array a is its base
+print(x.base)
+
+#none bcoz it is copy
+
+print(y.base)
+#array a is its base
