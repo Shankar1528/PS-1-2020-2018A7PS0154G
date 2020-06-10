@@ -5,9 +5,11 @@ print 'Our array is:'
 print a  
 print '\n'  
 
+
 print 'Applying amin() function:' 
 print np.amin(a,1) 
 print '\n'  
+
 
 print 'Applying amin() function again:' 
 print np.amin(a,0) 
